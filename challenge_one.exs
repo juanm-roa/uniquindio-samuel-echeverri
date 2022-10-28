@@ -75,7 +75,6 @@ defmodule ChallengeOne do
   defp filter_numbers([], filtered), do: filtered
 
   defp filter_numbers([head | tail], filtered) do
-
     if( not Enum.member?(tail, head) && not Enum.member?(tail, head*(-1)) ) do
       filter_numbers(tail, [head | filtered])
     else
